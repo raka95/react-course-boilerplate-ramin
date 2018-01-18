@@ -1,21 +1,18 @@
 import React from 'react';
-import {connect} from "react-redux";
-import {startLogin} from "../actions/auth";
+import {history} from "../routers/AppRouter";
 
-export const LoginPage=({startLogin})=>{
+
+export const LoginPage=()=>{
     return (
         <div className="box-layout"> 
-            <div className="box-layout__box">
-                <h1 className="box-layout__title">boilerplate</h1>
-                <p>Tag line for app</p>
-                <button className="button" onClick={startLogin}> Login with Google</button>
-            </div>
+            <form onSubmit={()=>history.push('/register')} className=" box-layout__2">
+                <h1 className="box-layout__title">LogIn Page</h1>
+                <input className="text-input" placeholder="Enter your Email Address" required={true}/>
+                <input className="text-input" placeholder="Enter Password" required={true}/> 
+                <button className="button" > Login </button>
+            </form>
         </div>
     );
 };
 
-const mapDispatchToProps=(dispatch)=>({
-    startLogin: ()=>dispatch(startLogin())
-});
-
-export default connect(undefined,mapDispatchToProps)(LoginPage);
+export default LoginPage;

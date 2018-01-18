@@ -1,5 +1,5 @@
 .box-layout{
-    background: url('/images/bg.jpg');
+    background: url('https://www.insuredasap.com/wp-content/uploads/sites/77/2017/12/convenience-store-insurance-chicago-illinois-indiana-michigan.jpg');
     background-size:cover;
     display:flex;
     height:100vh;
@@ -12,9 +12,25 @@
     border-radius:3px;
     padding:$l-size $m-size;
     text-align: center;
-    width:25rem;
+    width:40rem;
+    height: 40rem;
+}
+.box-layout__2{
+    background:fade-out(white,0.15);
+    border-radius:3px;
+    padding:$l-size $m-size;
+    text-align: center;
+    width:40rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.box-layout__2--2{
+    height: 60vh;
+    padding:$m-size $m-size;
 }
 .box-layout__title{
-    margin: 0 0 $m-size 0;
+    margin: 0 0 10rem 0;
     line-height: 1;
 }
